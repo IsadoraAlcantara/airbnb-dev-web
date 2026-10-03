@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ModelViewSet
 
-# Create your views here.
+from .models import Acomodacao
+from .serializers import AcomodacaoSerializer
+
+
+class AcomodacaoViewSet(ModelViewSet):
+    queryset = Acomodacao.objects.all()
+    serializer_class = AcomodacaoSerializer
