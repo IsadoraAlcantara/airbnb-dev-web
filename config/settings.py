@@ -56,8 +56,8 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    "TITLE": "API de Produtos",
-    "DESCRIPTION": "API de produtos construída com Django REST Framework",
+    "TITLE": "airbnb fake",
+    "DESCRIPTION": "Airbnb fake contruido com Django REST Framework",
     "VERSION": "1.0.0",
 }
 
