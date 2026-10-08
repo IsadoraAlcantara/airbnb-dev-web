@@ -8,9 +8,11 @@ from drf_spectacular.views import (
 )
 
 from acomodacoes.views import AcomodacaoViewSet
+from usuarios.views import UsuarioViewSet
 
 router = DefaultRouter()
 router.register("acomodacoes", AcomodacaoViewSet, basename="acomodacao")
+router.register("usuarios", UsuarioViewSet, basename="usuario")
 
 urlpatterns = [
     path("admin/", admin.site.urls),
