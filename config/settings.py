@@ -41,7 +41,10 @@ INSTALLED_APPS = [
     "drf_spectacular",
     "django_filters",
     "acomodacoes",
+    "usuarios",
 ]
+
+AUTH_USER_MODEL = 'usuarios.Usuario'
 
 REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
