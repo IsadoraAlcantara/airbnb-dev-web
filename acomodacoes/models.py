@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 
 class Acomodacao(models.Model):
@@ -9,6 +10,11 @@ class Acomodacao(models.Model):
     qtd_camas = models.PositiveIntegerField(default=0)
     max_hospedes = models.PositiveIntegerField(default=1)
     status_hospedagem = models.BooleanField(default=True)
+    proprietario = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="acomodacoes",
+    )
     # adicionar endereço
 
     def __str__(self):
