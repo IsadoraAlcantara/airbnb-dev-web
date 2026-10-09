@@ -15,6 +15,11 @@ class Acomodacao(models.Model):
         on_delete=models.CASCADE,
         related_name="acomodacoes",
     )
+    hospedes = models.ManyToManyField(
+        settings.AUTH_USER_MODEL,
+        through="reservas.Reserva",
+        related_name="acomodacoes_reservadas",
+    )
     # adicionar endereço
 
     def __str__(self):

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "django_filters",
     "acomodacoes",
     "usuarios",
+    "reservas",
 ]
 
 AUTH_USER_MODEL = 'usuarios.Usuario'
